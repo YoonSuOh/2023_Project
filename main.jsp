@@ -21,14 +21,14 @@
 <body class="pc">
     <div>
         <ul class="top-nav" >
-            <li class="top-nav-items"><a href="">로그인</a></li>
+            <li class="top-nav-items"><a href="login.jsp">로그인</a></li>
             <li class="top-nav-items">|</li>
             <li class="top-nav-items"><a href="">회원가입</a></li>
         </ul>
     </div>
     <nav>
         <ul class="main-nav">
-            <li class="main-nav-items"><a href=""><img class="logo" src="${path}/resources/img/logo.png"></a></li>
+            <li class="main-nav-items"><a href="main.jsp"><img class="logo" src="${path}/resources/img/logo.png"></a></li>
             <li class="main-nav-items"><a href="">분류보기</a></li>
             <li class="main-nav-items"><a href="">신고</a></li>
             <li class="main-nav-items"><a href="">특수기능</a></li>
