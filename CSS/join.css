@@ -15,6 +15,7 @@
 }    
 .body{
     margin:0;
+    background-color: #efefef;
 }
 /* 기본 해상도(QHD) */
 .pc{
@@ -22,14 +23,14 @@
     padding:0px;
     margin:0px;
     font-size: 20px;
-    background-color:#cccccc;
+    background-color: #efefef;
     /* display: none; 화면에서 안 보이고 공간도 차지하지 않음 */
 }  
 body{
     margin : 0 auto;
 }
 header{
-    padding-top:158px;
+    padding-top:78px;
     padding-bottom:48px;
 }   
 
@@ -46,9 +47,10 @@ header a{
 }
 
 .logo{
+    margin : 0 auto;
     width:175px;
     height:62px;
-    display:inline-block;
+    display:block;
     background : url(/main/webapp/resources/img/logo_skyblue.png) 0px 2px no-repeat;
 }
 
@@ -60,83 +62,59 @@ main, .main_inner{
     display: block;
 }
 
-.login_wrap{
-    position:relative;
-    width: 560px;
-    height:357px;
-    margin: 1px auto;
-    border: 1px solid #cccccc;
-    border-radius:6px;
-}
-.id_pw_wrap{
-    position:relative;
-    top:30px;
-    margin: 0 auto;
-    width:360px;
-}
-.form{
-    margin:0;
-    padding:0;
-    display: block;
+#group{
+    margin : 0 auto;
+    width: 460px;
 }
 
-.id_area, .pw_area{
-    position:relative;
-    top:30px;
-    margin: 0 auto;
-    display:table;
-    border:0;
-}
-
-#id, #pw{
-    width:360px;
-    height:60px;
+.input_area{
     font-family:'InterparkGothic';
+    margin : 0 auto;
+    margin-top:40px;
+}
+
+.form_text{
+    margin : 0 auto;
+    font-weight: bold;
+}
+
+.textForm{
+    margin : 0 auto;
+    width: 460px;
+    height:50px;
+}
+
+.textinput{
+    font-family:'InterparkGothic';
+    margin : 0 auto;
+    margin-top:20px;
+    width: 460px;
+    height:50px;
     border: 1px solid #cccccc;
-    border-radius:6px;
-    font-size:17px;
+    background-color: white;
 }
-.login_btn{
+
+.btn_area{
     position:relative;
-    top:50px;
-    width: 360px;
-    margin: 0 auto;
-    display:block;
+    top:40px;
+    margin : 0 auto;
+    width: 460px;
 }
-.btn_login{
-    position:relative;
-    top:60px;
-    width: 360px;
+
+.join_btn{
+    margin : 0 auto;
+    width: 460px;
     height:50px;
     background-color: skyblue;
     border: 1px solid rgb(48, 183, 236);
-    border-radius:6px;
-    font-size:25px;
+    font-size:20px;
     font-family:'InterparkGothicBold';
     color:#ffffff;
 }
 
-.find_wrap{
-    position:relative;
-    top:20px;
-    display:table;
-    margin:0 auto;
-    padding:0;
-    height:21px;
-}
-
-.find_wrap li, .find_wrap li a {
-    list-style:none;
-    float:left;
-    text-align:center;
-    text-decoration-line: none;
-    display: block;
-    padding : 0px 4px 0px 4px;
-    color:black;
-    font-size:17px;
-}
 footer{
-    margin-top:40px;
+    font-family:'InterparkGothic';
+    margin-top:370px;
 }
 
 .footer_inner{
