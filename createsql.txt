@@ -1,0 +1,99 @@
+create table user(
+    u_id varchar(30) primary key not null,
+    p_id int,
+    email varchar(50),
+    name varchar(10),
+    pw varchar(20),
+    reg_date date
+);
+create table perm(
+p_id int primary key not null,
+p_name varchar (10)
+);
+
+create table role(
+r_id int primary key not null,
+p_read int,
+p_up int,
+p_in int,
+p_del int
+);
+
+create table doc(
+d_num int primary key auto_increment not null ,
+s_ca_num int,
+d_content VARCHAR(10000),
+next int,
+prev int,
+img1 varchar(100),
+img2 varchar(100),
+img3 varchar(100),
+img4 varchar(100),
+img5 varchar(100),
+img6 varchar(100),
+img7 varchar(100),
+img8 varchar(100),
+img9 varchar(100),
+img10 varchar(100)
+);
+
+create table doc_history(
+d_version int not NULL,
+d_num int not null,
+u_id varchar(30),
+d_date date,
+d_summary varchar(100),
+PRIMARY KEY(d_num, d_version)
+);
+
+create table small_category(
+s_ca_num int auto_increment primary key not null,
+b_ca_num int,
+s_ca_name varchar(20),
+s_ca_level int
+);
+
+create table big_category(
+b_ca_num int auto_increment primary key not null,
+b_ca_name varchar(20),
+b_ca_level int
+);
+
+create table chat(
+c_num int auto_increment primary key not null,
+u_id varchar(20),
+p_id int,
+c_content varchar(500),
+c_date date,
+c_type int,
+c_many int
+);
+
+create table boardlist(
+bl_num INT auto_increment not NULL,
+b_num INT not NULL,
+u_id VARCHAR(20),
+b_title VARCHAR(50),
+b_content VARCHAR(2000),
+b_date DATE,
+hashtag1 VARCHAR(100),
+hashtag2 VARCHAR(100),
+hashtag3 VARCHAR(100),
+hashtag4 VARCHAR(100),
+hashtag5 VARCHAR(100),
+PRIMARY KEY(bl_num, b_num)
+);
+
+CREATE TABLE board(
+b_num INT auto_increment primary key not null,
+b_name VARCHAR(20)
+);
+
+CREATE TABLE COMMENT(
+cm_num int NOT NULL AUTO_INCREMENT,
+bl_num VARCHAR(11) NOT NULL,
+u_id VARCHAR(20),
+cm_content VARCHAR(20),
+cm_date DATE,
+PRIMARY KEY(cm_num,bl_num)
+);

@@ -1,0 +1,25 @@
+<새 문서 생성>
+-- 생성 전 auto_increment 값 초기화
+ALTER TABLE doc AUTO_INCREMENT = 1;
+ALTER TABLE doc_history AUTO_INCREMENT = 1;
+
+--  새 문서 생성
+INSERT INTO doc (d_title, d_content)
+VALUES ('C', '잘되지?');
+
+-- 새 문서 버전 기록
+INSERT INTO doc_history (d_version, d_num, d_date, d_time)
+SELECT 1, d_num, CURDATE(), CURTIME()
+FROM doc
+WHERE d_title = 'C';
+
+-- 이미 있는 문서 내용 업데이트
+UPDATE doc
+SET d_content = '잘되네'
+WHERE d_title = 'C++';
+
+-- 문서 버전 증가
+INSERT INTO doc_history (d_version, d_num, d_date, d_time)
+SELECT COALESCE(MAX(d_version), 0) + 1, d_num, CURDATE(), CURTIME()
+FROM doc_history
+WHERE d_num = (SELECT d_num FROM doc WHERE d_title = 'C++');
