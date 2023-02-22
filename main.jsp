@@ -73,8 +73,8 @@
         <hr>
     </div>
     <div class="main-content">
-        <div class="main-content-items"><a href=""><p>규정</p></a></div>
-        <div class="main-content-items"><a href=""><p>규정</p></a></div>
+        <div class="main-content-items"><a href=""><p>새문서 만들기</p></a></div>
+        <div class="main-content-items"><a href='<c:url value='/doc/doc_history'/>'><p>문서 역사 보기</p></a></div>
         <div class="main-content-items"><a href=""><p>규정</p></a></div>
         <div class="main-content-items"><a href=""><p>규정</p></a></div>
         <div class="main-content-items"><a href=""><p>규정</p></a></div>
